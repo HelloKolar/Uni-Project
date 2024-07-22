@@ -107,7 +107,7 @@ exports.postCart = (req, res, next) => {
       if (userId.toString() === product.userId.toString()) {
         return res.status(400).send("Can't order your own product!!");
       }
-      return req.user.addToCart(product).then((result) => {
+      return req.user.addToCart(product, quantity).then((result) => {
         console.log(result);
         res.redirect("/cart");
       });
@@ -226,7 +226,7 @@ exports.getInvoice = (req, res, next) => {
       pdfDoc
         .fontSize(20)
         .fillColor("black")
-        .text("Company Name", { align: "center" })
+        .text("Shwe Poe Eain", { align: "center" })
         .moveDown();
 
       // Invoice Title

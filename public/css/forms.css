@@ -1,5 +1,6 @@
 .form-control {
   margin: 1rem 0;
+  position: relative;
 }
 
 .form-control label,
@@ -28,3 +29,11 @@
   color: red;
 }
 
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 90%;
+  transform: translateY(-90%);
+  cursor: pointer;
+  font-size: 13px;
+}
